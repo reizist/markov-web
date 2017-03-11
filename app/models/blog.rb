@@ -14,4 +14,5 @@
 #
 
 class Blog < ApplicationRecord
+  has_many :articles, inverse_of: :blog
 end
