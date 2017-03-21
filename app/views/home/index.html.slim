@@ -1,0 +1,8 @@
+= form_tag('post') do
+  = text_field_tag "url"
+  = submit_tag "post"
+
+ul
+- if @sentences
+  - @sentences.each do |sentence|
+    li= sentence

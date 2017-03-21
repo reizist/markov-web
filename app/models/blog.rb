@@ -15,4 +15,8 @@
 
 class Blog < ApplicationRecord
   has_many :articles, inverse_of: :blog
+  
+  def digest(count: 3)
+    articles.sample(count).pluck(:text).join
+  end
 end
