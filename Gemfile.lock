@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:reizist/hatena_blog_scraper.git
-  revision: aba5f0f7480d37bb23d382f7a4beedd42298f252
+  revision: c4c03c126447e567fba8be476fea5185ae9ce0f0
   specs:
     hatena_blog_scraper (0.1.1)
       nokogiri (~> 1.7)
@@ -98,7 +98,7 @@ GEM
     multi_json (1.12.1)
     mysql2 (0.4.5)
     nio4r (2.0.0)
-    nokogiri (1.7.0.1)
+    nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
