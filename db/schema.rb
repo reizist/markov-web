@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170311133445) do
+ActiveRecord::Schema.define(version: 20170321070043) do
+
+  create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "blog_id"
+    t.text     "text",       limit: 65535
+    t.text     "html",       limit: 65535
+    t.text     "markdown",   limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "url"
+    t.index ["blog_id"], name: "index_articles_on_blog_id", using: :btree
+    t.index ["url"], name: "index_articles_on_url", unique: true, using: :btree
+  end
 
   create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title",      null: false
@@ -20,4 +32,5 @@ ActiveRecord::Schema.define(version: 20170311133445) do
     t.index ["url"], name: "index_blogs_on_url", unique: true, using: :btree
   end
 
+  add_foreign_key "articles", "blogs"
 end
