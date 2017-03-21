@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem "slim-rails"
 gem "hatena_blog_scraper", :git => 'git@github.com:reizist/hatena_blog_scraper.git'
 
+gem "natto"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "pry-rails"
